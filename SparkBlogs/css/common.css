@@ -1,0 +1,136 @@
+﻿/*
+* Created by HarryWang 
+*/
+*{
+    margin:0;
+    padding:0;
+    border-width:0;
+}
+
+a:link,a:visited{
+    /*鼠标未移上去时的超链接样式&超链接访问后的样式*/
+    color:#000;
+    text-decoration:none;
+}
+a:hover{
+    /*鼠标移到超链接上的样式*/
+    color:#00f;
+    text-decoration:underline;
+}
+
+#logo{
+    margin-left:60px;
+}
+#txtSearch{  /*搜索关键字文本框样式*/
+    border: 1px solid #9CCFFF;
+    background-color:#EFF7FF;
+    height:25px;
+    width:150px;
+    font-size:16px;
+    line-height:25px;
+    margin-right:5px
+}
+#accont{    /*登录链接样式*/
+    font-size:14px;
+}
+#btnSearch{ /*搜索按钮样式*/
+     background-image:url("../images/searchbtn25.png");
+    background-repeat:no-repeat;
+    width:25px;
+    height:25px;
+    border-style:none;
+    margin-top:10px;
+}
+#navigation{ /*导航栏样式*/
+    margin-top:80px;
+}
+#search{    /*搜索栏样式*/
+    margin-top:40px;
+    margin-left:850px;
+}
+#logo,#navigation,#search{
+    float:left;    
+}
+#banner{    /*banner样式*/
+    margin-left:0px;
+}
+#footer{/*尾部样式*/
+    text-align:center;
+    border-top:5px solid #D6D7D6 ;
+    padding-top:10px;
+    clear:left;
+}
+.commonfrm h4{
+    /*框架标题样式*/
+    color:#fff;
+    background-color:#7BAEEF;
+    padding:3px 10px;
+    width:500px;
+}
+#headimg,#blogdes{
+    float:left;
+}
+/*#listitem{
+    width:900px;
+}*/
+/*body{ 
+    font-size:12px; 
+      line-height:1.8;
+       width:900px; 
+       margin:auto;}*/  
+*{ 
+    margin:0;
+    padding:0;
+
+}  
+h1{ 
+    background:red;
+     font-size:14px;
+      height:35px; 
+      line-height:35px; 
+      padding-left:20px;
+       color:white;
+}  
+h2{ 
+    font-size:14px; 
+    height:35px; 
+    line-height:35px;
+}  
+  
+#Methods2{
+     width:900px;
+            background:#ccc;
+}  
+#Methods2 dl{
+    width:860px; 
+    height:200px; 
+    margin:20px; 
+    background:red;
+
+}  
+#Methods2 dt{
+    width:180px; 
+    height:180px; 
+    float:left; 
+    margin:10px; 
+    background:#FFF;
+
+}  
+#Methods2 dd{
+    width:610px; 
+    height:160px; 
+    float:left; 
+    margin:10px 10px 10px 0;
+     padding:10px 20px; 
+     line-height:20px; 
+     background:#FFFFFF; 
+     text-align:left;
+
+}  
+.More{ 
+    position:absolute;
+     right:120px; 
+     margin-top:10px;
+
+}  
+

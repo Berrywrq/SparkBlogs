@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Common.master.cs" Inherits="SparkBlogs.Common" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>首页-Spark Blog</title>
+    <link href="css/common.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="top">
+            <img id="logo" src="images/logo.jpg" />
+            <div id="navigation">
+                <a href="#">首页</a>
+                <a href="#">博客专栏</a>
+                <a href="#">博客专家</a>
+                <a href="#">我的博客</a>
+            </div>
+            <div id="search"><a id="accont" href="#">登录</a>
+            <asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
+            <asp:Button ID="btnSearch" runat="server" ></asp:Button>
+            </div>           
+        </div>
+        <img id="banner"src="images/banner.jpg" />
+        
+    <div id="main">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="footer">copyright &copy; 2017 <a href="#">HarryWang</a></div>
+    </form>
+</body>
+</html>
