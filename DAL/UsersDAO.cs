@@ -183,5 +183,43 @@ namespace DAL
         }
         #endregion
 
+        #region Select user by id.
+        /// <summary>
+        /// Select user by id.
+        /// </summary>
+        /// <param name="id">User's id</param>
+        /// <returns></returns>
+        public DataTable SelectById(string id)
+        {
+            DataTable dt = new DataTable();
+            string commandText = "users_selectById";
+            SqlParameter[] paras = new SqlParameter[]
+            {
+                new SqlParameter("@id",id)
+            };
+            dt = sqlhelper.ExecuteQuery(commandText, paras, CommandType.StoredProcedure);
+            return dt;
+        }
+        #endregion
+
+        #region Select user's detail information by id
+        /// <summary>
+        /// Select user's detail information by id
+        /// </summary>
+        /// <param name="id">User's id</param>
+        /// <returns></returns>
+        public DataTable SelectDetailById(string id)
+        {
+            DataTable dt = new DataTable();
+            string commandText = "users_selectDetailById";
+            SqlParameter[] paras = new SqlParameter[]
+            {
+                new SqlParameter("@id",id)
+            };
+            dt = sqlhelper.ExecuteQuery(commandText, paras, CommandType.StoredProcedure);
+            return dt;
+        }
+        #endregion
+
     }
 }

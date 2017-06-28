@@ -91,7 +91,7 @@ namespace BLL
         /// </summary>
         /// <param name="id">User id</param>
         /// <returns></returns>
-        public DataTable SelectByUser(int id)
+        public DataTable SelectByUser(string id)
         {
             return blogdao.SelectByUser(id);
         }
@@ -125,6 +125,56 @@ namespace BLL
         public DataTable SelectRecycleBlog()
         {
             return blogdao.SelectRecycleBlog();
+        }
+
+        /// <summary>
+        /// Select blogs' comment count by blog id
+        /// </summary>
+        /// <param name="id">Blog id</param>
+        /// <returns></returns>
+        public DataTable SelectCommentCountByBlog(string id)
+        {
+            return blogdao.SelectCommentCountByBlog(id);
+        }
+
+        /// <summary>
+        /// Select personal category by user id
+        /// </summary>
+        /// <param name="id">User id</param>
+        /// <returns></returns>
+        public DataTable SelectPersonalCateByUser(string id)
+        {
+            return blogdao.SelectPersonalCateByUser(id);
+        }
+
+        /// <summary>
+        /// Seletct the top ten blogs by read count
+        /// </summary>
+        /// <param name="id">User id</param>
+        /// <returns></returns>
+        public DataTable SelectTopByReadCount(string id)
+        {
+            return blogdao.SelectTopByReadCount(id);
+        }
+
+        /// <summary>
+        /// Select top ten blogs by comment count
+        /// </summary>
+        /// <param name="id">User id</param>
+        /// <returns></returns>
+        public DataTable SelectTopByCommentCount(string id)
+        {
+            return blogdao.SelectTopByCommentCount(id);
+        }
+
+        /// <summary>
+        /// Select blog's datail by blog id
+        /// </summary>
+        /// <param name="id">Blog id</param>
+        /// <returns></returns>
+        public DataTable SelectById(string id)
+        {
+            return blogdao.SelectById(id);
         }
     }
 }

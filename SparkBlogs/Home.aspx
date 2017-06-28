@@ -126,12 +126,12 @@
                 <asp:Repeater ID="Replatest" runat="server">
                     <ItemTemplate>
                         <dl class="blog_list clearfix">
-                            <dt><a href="#">
+                            <dt><a href="UserBlogs.aspx?userId=<%#Eval("author_id") %>">
                                 <img src="images/1.png" class="head" /></a>
-                                <a href="#" class="nickname"><%# Eval("author_name") %></a>
+                                <a href="UserBlogs.aspx?userId=<%#Eval("author_id") %>" class="nickname"><%# Eval("author_name") %></a>
                             </dt>
                             <dd>
-                                <h3 class="tracking-ad" data-mod="popu_254"><a href="#"><%# Eval("title") %></a></h3>
+                                <h3 class="tracking-ad" data-mod="popu_254"><a href="BlogContent.aspx?userId=<%#Eval("author_id") %>&blogId=<%#Eval("blog_id") %>"><%# Eval("title") %></a></h3>
                                 <div class="blog_list_c">
                                     <%# Eval("distribution") %>
                                 </div>
@@ -208,12 +208,12 @@
                 <asp:Repeater ID="Reppopular" runat="server">
                     <ItemTemplate>
                         <dl class="blog_list clearfix">
-                            <dt><a href="#">
+                            <dt><a href="UserBlogs.aspx?userId=<%#Eval("author_id") %>">
                                 <img src="#" class="head"></a>
-                                <a href="#" class="nickname"><%#Eval("author_name") %></a>
+                                <a href="UserBlogs.aspx?userId=<%#Eval("author_id") %>" class="nickname"><%#Eval("author_name") %></a>
                             </dt>
                             <dd>
-                                <h3 class="tracking-ad" data-mod="popu_254"><a href="#" target="_blank">#<%#Eval("title") %></a></h3>
+                                <h3 class="tracking-ad" data-mod="popu_254"><a href="#" target="_blank"><%#Eval("title") %></a></h3>
                                 <div class="blog_list_c">
                                     <%#Eval("distribution") %>
                                 </div>
@@ -334,9 +334,9 @@
                 <asp:Repeater ID="Reptopuser" runat="server">
                     <ItemTemplate>
                         <dl class="expert_c">
-                            <dt class="tracking-ad" data-mod="popu_253"><a href="http://blog.csdn.net/wzy0623" target="_blank">
+                            <dt class="tracking-ad" data-mod="popu_253"><a href="UserBlogs.aspx?userId=<%#Eval("user_id") %>" target="_blank">
                                 <img src="#" class="head_expert"></a>
-                                <h4 class="expert_name"><a href="#" target="_blank"><%#Eval("user_name") %></a></h4>
+                                <h4 class="expert_name"><a href="UserBlogs.aspx?userId=<%#Eval("user_id") %>" target="_blank"><%#Eval("user_name") %></a></h4>
                                 <p class="author">金牌博主</p>
                             </dt>
                             <dd>
@@ -417,10 +417,10 @@
                     <asp:Repeater ID="Reppopularuser" runat="server">
                         <ItemTemplate>
                             <dl class="expert_list">
-                                <dt><a href="#" target="_blank">
+                                <dt><a href="UserBlogs.aspx?userId=<%#Eval("user_id") %>" target="_blank">
                                     <img src="#" alt="img" /></a>
                                 </dt>
-                                <dd><a href="#" target="_blank" class="expert_t"><%#Eval("user_name") %></a>
+                                <dd><a href="UserBlogs.aspx?userId=<%#Eval("user_id") %>" target="_blank" class="expert_t"><%#Eval("user_name") %></a>
                                     <p class="expert_intro"><%#Eval("description") %></p>
                                 </dd>
                             </dl>

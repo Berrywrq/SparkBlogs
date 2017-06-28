@@ -94,5 +94,25 @@ namespace BLL
         {
             return userdao.SelectTopUser();
         }
+
+        /// <summary>
+        /// Select user by id.
+        /// </summary>
+        /// <param name="id">User's id</param>
+        /// <returns></returns>
+        public DataTable SelectById(string id)
+        {
+            return userdao.SelectById(id);
+        }
+
+        /// <summary>
+        /// Select user's detail information by id
+        /// </summary>
+        /// <param name="id">User's id</param>
+        /// <returns></returns>
+        public DataTable SelectDetailById(string id)
+        {
+            return userdao.SelectDetailById(id);
+        }
     }
 }

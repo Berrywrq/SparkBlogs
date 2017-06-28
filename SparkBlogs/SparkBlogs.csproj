@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BlogContent.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="css\common.css" />
     <Content Include="css\component.css" />
@@ -92,12 +93,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Search.aspx" />
     <Content Include="SearchCategory.aspx" />
+    <Content Include="UserBlogs.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlogContent.aspx.cs">
+      <DependentUpon>BlogContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogContent.aspx.designer.cs">
+      <DependentUpon>BlogContent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Common.Master.cs">
       <DependentUpon>Common.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -120,12 +130,26 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SearchCategory.aspx.cs">
       <DependentUpon>SearchCategory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SearchCategory.aspx.designer.cs">
       <DependentUpon>SearchCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserBlogs.aspx.cs">
+      <DependentUpon>UserBlogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserBlogs.aspx.designer.cs">
+      <DependentUpon>UserBlogs.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

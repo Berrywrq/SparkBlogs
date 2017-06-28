@@ -162,7 +162,7 @@ namespace DAL
         /// </summary>
         /// <param name="id">User id</param>
         /// <returns></returns>
-        public DataTable SelectByUser(int id)
+        public DataTable SelectByUser(string id)
         {
             DataTable dt = new DataTable();
             string commandText = "blog_selectByUser";
@@ -221,5 +221,99 @@ namespace DAL
         }
         #endregion
 
+        #region Select blogs' comment count by blog id
+        /// <summary>
+        ///  Select blogs' comment count by blog id
+        /// </summary>
+        /// <param name="id">Blog id</param>
+        /// <returns></returns>
+        public DataTable SelectCommentCountByBlog(string id)
+        {
+            DataTable dt = new DataTable();
+            string commandText = "blog_selectBlogCommentCountByBlog";
+            SqlParameter[] paras = new SqlParameter[]
+            {
+                new SqlParameter("@id",id)
+            };
+            dt = sqlhelper.ExecuteQuery(commandText, paras, CommandType.StoredProcedure);
+            return dt;
+        }
+        #endregion
+
+        #region Select personal category by user id
+        /// <summary>
+        ///  Select personal category by user id
+        /// </summary>
+        /// <param name="id">User id</param>
+        /// <returns></returns>
+        public DataTable SelectPersonalCateByUser(string id)
+        {
+            DataTable dt = new DataTable();
+            string commandText = "blog_selectPersonalCateById";
+            SqlParameter[] paras = new SqlParameter[]
+            {
+                new SqlParameter("@id",id)
+            };
+            dt = sqlhelper.ExecuteQuery(commandText, paras, CommandType.StoredProcedure);
+            return dt;
+        }
+        #endregion
+
+        #region Select the top ten blogs by read count
+        /// <summary>
+        ///  Select the top ten blogs by read count
+        /// </summary>
+        /// <param name="id">User id</param>
+        /// <returns></returns>
+        public DataTable SelectTopByReadCount(string id)
+        {
+            DataTable dt = new DataTable();
+            string commandText = "blog_selectByReadCount";
+            SqlParameter[] paras = new SqlParameter[]
+            {
+                new SqlParameter("@id",id)
+            };
+            dt = sqlhelper.ExecuteQuery(commandText, paras, CommandType.StoredProcedure);
+            return dt;
+        }
+        #endregion
+
+        #region Select top ten blogs by comment count
+        /// <summary>
+        ///  Select top ten blogs by comment count
+        /// </summary>
+        /// <param name="id">User id</param>
+        /// <returns></returns>
+        public DataTable SelectTopByCommentCount(string id)
+        {
+            DataTable dt = new DataTable();
+            string commandText = "blog_selectByCommentCount";
+            SqlParameter[] paras = new SqlParameter[]
+            {
+                new SqlParameter("@id",id)
+            };
+            dt = sqlhelper.ExecuteQuery(commandText, paras, CommandType.StoredProcedure);
+            return dt;
+        }
+        #endregion
+
+        #region Select blog's datail by blog id
+        /// <summary>
+        /// Select blog's datail by blog id
+        /// </summary>
+        /// <param name="id">Blog id</param>
+        /// <returns></returns>
+        public DataTable SelectById(string id)
+        {
+            DataTable dt = new DataTable();
+            string commandText = "blog_selectById";
+            SqlParameter[] paras = new SqlParameter[]
+            {
+                new SqlParameter("@id",id)
+            };
+            dt = sqlhelper.ExecuteQuery(commandText, paras, CommandType.StoredProcedure);
+            return dt;
+        }
+        #endregion
     }
 }
